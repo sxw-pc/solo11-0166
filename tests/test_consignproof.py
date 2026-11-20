@@ -33,6 +33,12 @@ class ConsignCase(unittest.TestCase):
         data=fixture('consign_ok.json');data['proofs'][0]['serial']='wrong'
         feed(self.db,'consign-import',data)
         self.assertEqual(self.state('title_decision')['state'],'blocked')
+    def test_expired_mandate_blocks_new_payment(self):
+        data=fixture('consign_ok.json');data['contracts'][0]['valid_to']='2026-11-02'
+        feed(self.db,'consign-import',data)
+        feed(self.db,'grade-import',fixture('grade_ok.json'))
+        feed(self.db,'sale-import',fixture('sale_ok.json'))
+        self.assertEqual(self.state('sale_decision')['state'],'blocked')
     def test_parallel_contract_version_conflict(self):
         feed(self.db,'consign-import',fixture('consign_ok.json'))
         data=fixture('consign_ok.json');data['contracts'][0]['event_id']='contract-2';data['contracts'][0]['reserve_price']=9000;data['proofs']=[]
