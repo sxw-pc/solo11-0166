@@ -1,0 +1,1 @@
+{"inspections":[{"event_id":"inspection-1","item":"camera-1","version":1,"serial":"serial-a","functional":"pass","cosmetic":"minor-scuff","photo_sha":"photo-a","inspector":"checker-a"}],"prices":[{"event_id":"price-1","item":"camera-1","version":1,"amount":10000,"at":"2026-11-02","signer":"shop-a"}]}

@@ -1,0 +1,1 @@
+{"payments":[{"event_id":"pay-1","order_id":"order-1","item":"camera-1","amount":10000,"paid_at":"2026-11-03","provider":"bank"}],"deliveries":[{"event_id":"delivery-1","order_id":"order-1","item":"camera-1","serial":"serial-a","buyer":"buyer-a","signed_at":"2026-11-04"}]}
