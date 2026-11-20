@@ -4,3 +4,10 @@ __pycache__/
 build/
 dist/
 *.sqlite
+.venv/
+venv/
+node_modules/
+.pytest_cache/
+.coverage
+.benchmarks/
+.env
