@@ -15,6 +15,13 @@ CREATE TABLE IF NOT EXISTS delivery(event_id TEXT PRIMARY KEY,order_id TEXT NOT 
 CREATE TABLE IF NOT EXISTS return_claim(event_id TEXT PRIMARY KEY,order_id TEXT NOT NULL,item TEXT NOT NULL,at TEXT NOT NULL,reason TEXT NOT NULL,photo_sha TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS sale_decision(item TEXT PRIMARY KEY,state TEXT NOT NULL,reason TEXT NOT NULL,owner_amount INTEGER NOT NULL,commission INTEGER NOT NULL,frozen INTEGER NOT NULL,version INTEGER NOT NULL);
 CREATE TABLE IF NOT EXISTS decision_history(id INTEGER PRIMARY KEY,subsystem TEXT NOT NULL,item TEXT NOT NULL,version INTEGER NOT NULL,state TEXT NOT NULL,reason TEXT NOT NULL,at TEXT DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS item_meta(event_id TEXT PRIMARY KEY,item TEXT NOT NULL,category TEXT NOT NULL,period TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS party_alias(event_id TEXT PRIMARY KEY,canonical TEXT NOT NULL,alias TEXT NOT NULL,at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS research_consent(event_id TEXT PRIMARY KEY,party_role TEXT NOT NULL,party TEXT NOT NULL,period TEXT NOT NULL,scope TEXT NOT NULL,granted_at TEXT NOT NULL,signed_by TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS research_withdrawal(event_id TEXT PRIMARY KEY,party_role TEXT NOT NULL,party TEXT NOT NULL,at TEXT NOT NULL,signed_by TEXT NOT NULL,reason TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS research_lineage(lineage TEXT PRIMARY KEY,salt TEXT NOT NULL,created_at TEXT DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS research_release(version TEXT NOT NULL,lineage TEXT NOT NULL,mode TEXT NOT NULL,periods TEXT NOT NULL,as_of TEXT NOT NULL,digest TEXT NOT NULL,manifest TEXT NOT NULL,status TEXT NOT NULL,PRIMARY KEY(lineage,version));
+CREATE TABLE IF NOT EXISTS research_unit_map(version TEXT NOT NULL,lineage TEXT NOT NULL,item TEXT NOT NULL,unit_ref TEXT NOT NULL,included INTEGER NOT NULL,reasons TEXT NOT NULL,owner_ref TEXT NOT NULL,buyer_ref TEXT NOT NULL,serial_ref TEXT NOT NULL,decision_versions TEXT NOT NULL,consent_basis TEXT NOT NULL,cell TEXT NOT NULL,PRIMARY KEY(lineage,version,item));
 """
 def connect(path):
     db=sqlite3.connect(path);db.row_factory=sqlite3.Row;db.executescript(SCHEMA);return db

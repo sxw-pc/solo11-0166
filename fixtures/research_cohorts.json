@@ -1,0 +1,163 @@
+{
+  "stages": [
+    {
+      "stage": "v1",
+      "consign": {
+        "contracts": [
+          {"event_id": "r-contract-1", "item": "camera-1", "version": 1, "owner": "seller-a", "serial": "ser-101", "valid_from": "2026-01-05", "valid_to": "2026-04-30", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-a"},
+          {"event_id": "r-contract-2", "item": "camera-2", "version": 1, "owner": "seller-a2", "serial": "ser-102", "valid_from": "2026-01-05", "valid_to": "2026-04-30", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-a2"},
+          {"event_id": "r-contract-3", "item": "camera-3", "version": 1, "owner": "seller-b", "serial": "ser-103", "valid_from": "2026-01-05", "valid_to": "2026-04-30", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-b"},
+          {"event_id": "r-contract-4", "item": "lens-1", "version": 1, "owner": "seller-c", "serial": "ser-104", "valid_from": "2026-01-05", "valid_to": "2026-04-30", "reserve_price": 3000, "commission_pct": 10, "signed_by": "seller-c"},
+          {"event_id": "r-contract-5", "item": "watch-1", "version": 1, "owner": "seller-c", "serial": "ser-105", "valid_from": "2026-01-05", "valid_to": "2026-04-30", "reserve_price": 11000, "commission_pct": 10, "signed_by": "seller-c"},
+          {"event_id": "r-contract-6", "item": "watch-2", "version": 1, "owner": "seller-d", "serial": "ser-106", "valid_from": "2026-01-05", "valid_to": "2026-04-30", "reserve_price": 12000, "commission_pct": 10, "signed_by": "seller-d"}
+        ],
+        "proofs": [
+          {"event_id": "r-proof-1", "item": "camera-1", "serial": "ser-101", "holder": "seller-a", "issuer": "registry"},
+          {"event_id": "r-proof-2", "item": "camera-2", "serial": "ser-102", "holder": "seller-a2", "issuer": "registry"},
+          {"event_id": "r-proof-3", "item": "camera-3", "serial": "ser-103", "holder": "seller-b", "issuer": "registry"},
+          {"event_id": "r-proof-4", "item": "lens-1", "serial": "ser-104", "holder": "seller-c", "issuer": "registry"},
+          {"event_id": "r-proof-5", "item": "watch-1", "serial": "ser-105", "holder": "seller-c", "issuer": "registry"},
+          {"event_id": "r-proof-6", "item": "watch-2", "serial": "ser-106", "holder": "seller-d", "issuer": "registry"}
+        ]
+      },
+      "grade": {
+        "inspections": [
+          {"event_id": "r-insp-1", "item": "camera-1", "version": 1, "serial": "ser-101", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-1", "inspector": "checker-a"},
+          {"event_id": "r-insp-2", "item": "camera-2", "version": 1, "serial": "ser-102", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-2", "inspector": "checker-a"},
+          {"event_id": "r-insp-3", "item": "camera-3", "version": 1, "serial": "ser-103", "functional": "pass", "cosmetic": "scuff", "photo_sha": "r-photo-3", "inspector": "checker-b"},
+          {"event_id": "r-insp-4", "item": "lens-1", "version": 1, "serial": "ser-104", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-4", "inspector": "checker-b"},
+          {"event_id": "r-insp-5", "item": "watch-1", "version": 1, "serial": "ser-105", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-5", "inspector": "checker-a"},
+          {"event_id": "r-insp-6", "item": "watch-2", "version": 1, "serial": "ser-106", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-6", "inspector": "checker-a"}
+        ],
+        "prices": [
+          {"event_id": "r-price-1", "item": "camera-1", "version": 1, "amount": 10000, "at": "2026-02-01", "signer": "shop-a"},
+          {"event_id": "r-price-2", "item": "camera-2", "version": 1, "amount": 10000, "at": "2026-02-01", "signer": "shop-a"},
+          {"event_id": "r-price-3", "item": "camera-3", "version": 1, "amount": 10000, "at": "2026-02-03", "signer": "shop-a"},
+          {"event_id": "r-price-4", "item": "lens-1", "version": 1, "amount": 4000, "at": "2026-02-10", "signer": "shop-a"},
+          {"event_id": "r-price-5", "item": "watch-1", "version": 1, "amount": 13000, "at": "2026-02-12", "signer": "shop-a"},
+          {"event_id": "r-price-6", "item": "watch-2", "version": 1, "amount": 13000, "at": "2026-02-20", "signer": "shop-a"}
+        ]
+      },
+      "sale": {
+        "payments": [
+          {"event_id": "r-pay-1", "order_id": "r-order-1", "item": "camera-1", "amount": 10000, "paid_at": "2026-02-15", "provider": "bank"},
+          {"event_id": "r-pay-2", "order_id": "r-order-2", "item": "camera-2", "amount": 10000, "paid_at": "2026-02-15", "provider": "bank"},
+          {"event_id": "r-pay-3", "order_id": "r-order-3", "item": "camera-3", "amount": 10000, "paid_at": "2026-02-18", "provider": "bank"},
+          {"event_id": "r-pay-4", "order_id": "r-order-4", "item": "lens-1", "amount": 4000, "paid_at": "2026-02-22", "provider": "bank"},
+          {"event_id": "r-pay-5", "order_id": "r-order-5", "item": "watch-1", "amount": 13000, "paid_at": "2026-02-25", "provider": "bank"},
+          {"event_id": "r-pay-6", "order_id": "r-order-6", "item": "watch-2", "amount": 13000, "paid_at": "2026-03-05", "provider": "bank"}
+        ],
+        "deliveries": [
+          {"event_id": "r-del-1", "order_id": "r-order-1", "item": "camera-1", "serial": "ser-101", "buyer": "buyer-x", "signed_at": "2026-02-20"},
+          {"event_id": "r-del-2", "order_id": "r-order-2", "item": "camera-2", "serial": "ser-102", "buyer": "buyer-y", "signed_at": "2026-02-20"},
+          {"event_id": "r-del-3", "order_id": "r-order-3", "item": "camera-3", "serial": "ser-103", "buyer": "buyer-x", "signed_at": "2026-02-24"},
+          {"event_id": "r-del-4", "order_id": "r-order-4", "item": "lens-1", "serial": "ser-104", "buyer": "buyer-y", "signed_at": "2026-02-27"},
+          {"event_id": "r-del-5", "order_id": "r-order-5", "item": "watch-1", "serial": "ser-105", "buyer": "buyer-z", "signed_at": "2026-03-01"},
+          {"event_id": "r-del-6", "order_id": "r-order-6", "item": "watch-2", "serial": "ser-106", "buyer": "buyer-x", "signed_at": "2026-03-10"}
+        ]
+      },
+      "research": {
+        "items": [
+          {"event_id": "r-meta-1", "item": "camera-1", "category": "camera", "period": "p1"},
+          {"event_id": "r-meta-2", "item": "camera-2", "category": "camera", "period": "p1"},
+          {"event_id": "r-meta-3", "item": "camera-3", "category": "camera", "period": "p1"},
+          {"event_id": "r-meta-4", "item": "lens-1", "category": "lens", "period": "p1"},
+          {"event_id": "r-meta-5", "item": "watch-1", "category": "watch", "period": "p1"},
+          {"event_id": "r-meta-6", "item": "watch-2", "category": "watch", "period": "p1"},
+          {"event_id": "r-meta-7", "item": "camera-7", "category": "camera", "period": "p2"},
+          {"event_id": "r-meta-8", "item": "laptop-1", "category": "laptop", "period": "p2"},
+          {"event_id": "r-meta-9", "item": "lens-2", "category": "lens", "period": "p2"},
+          {"event_id": "r-meta-10", "item": "camera-9", "category": "camera", "period": "p2"},
+          {"event_id": "r-meta-11", "item": "watch-3", "category": "watch", "period": "p1"}
+        ],
+        "aliases": [
+          {"event_id": "r-alias-1", "canonical": "seller-a", "alias": "seller-a2", "at": "2026-01-02"}
+        ],
+        "consents": [
+          {"event_id": "r-con-1", "party_role": "owner", "party": "seller-a", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-01", "signed_by": "seller-a"},
+          {"event_id": "r-con-2", "party_role": "owner", "party": "seller-a2", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-01", "signed_by": "seller-a2"},
+          {"event_id": "r-con-3", "party_role": "owner", "party": "seller-b", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-01", "signed_by": "seller-b"},
+          {"event_id": "r-con-4", "party_role": "owner", "party": "seller-c", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-01", "signed_by": "seller-c"},
+          {"event_id": "r-con-5", "party_role": "owner", "party": "seller-d", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-01", "signed_by": "seller-d"},
+          {"event_id": "r-con-6", "party_role": "buyer", "party": "buyer-x", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-01", "signed_by": "buyer-x"},
+          {"event_id": "r-con-7", "party_role": "buyer", "party": "buyer-y", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-01", "signed_by": "buyer-y"},
+          {"event_id": "r-con-8", "party_role": "buyer", "party": "buyer-z", "period": "p1", "scope": "period-stats", "granted_at": "2026-02-01", "signed_by": "buyer-z"}
+        ],
+        "withdrawals": []
+      }
+    },
+    {
+      "stage": "v2",
+      "consign": {
+        "contracts": [
+          {"event_id": "r-contract-7", "item": "camera-7", "version": 1, "owner": "seller-a", "serial": "ser-107", "valid_from": "2026-05-05", "valid_to": "2026-08-31", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-a"},
+          {"event_id": "r-contract-8", "item": "laptop-1", "version": 1, "owner": "seller-b", "serial": "ser-108", "valid_from": "2026-05-05", "valid_to": "2026-08-31", "reserve_price": 6000, "commission_pct": 10, "signed_by": "seller-b"},
+          {"event_id": "r-contract-9", "item": "lens-2", "version": 1, "owner": "seller-e", "serial": "ser-109", "valid_from": "2026-05-05", "valid_to": "2026-08-31", "reserve_price": 3000, "commission_pct": 10, "signed_by": "seller-e"},
+          {"event_id": "r-contract-10", "item": "camera-9", "version": 1, "owner": "seller-d", "serial": "ser-110", "valid_from": "2026-05-05", "valid_to": "2026-08-31", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-d"},
+          {"event_id": "r-contract-11", "item": "watch-3", "version": 1, "owner": "seller-f", "serial": "ser-111", "valid_from": "2026-02-01", "valid_to": "2026-04-30", "reserve_price": 11000, "commission_pct": 10, "signed_by": "seller-f"}
+        ],
+        "proofs": [
+          {"event_id": "r-proof-7", "item": "camera-7", "serial": "ser-107", "holder": "seller-a", "issuer": "registry"},
+          {"event_id": "r-proof-8", "item": "laptop-1", "serial": "ser-108", "holder": "seller-b", "issuer": "registry"},
+          {"event_id": "r-proof-9", "item": "lens-2", "serial": "ser-109", "holder": "seller-e", "issuer": "registry"},
+          {"event_id": "r-proof-10", "item": "camera-9", "serial": "ser-110", "holder": "seller-d", "issuer": "registry"},
+          {"event_id": "r-proof-11", "item": "watch-3", "serial": "ser-111", "holder": "seller-f", "issuer": "registry"}
+        ]
+      },
+      "grade": {
+        "inspections": [
+          {"event_id": "r-insp-7", "item": "camera-7", "version": 1, "serial": "ser-107", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-7", "inspector": "checker-a"},
+          {"event_id": "r-insp-8", "item": "laptop-1", "version": 1, "serial": "ser-108", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-8", "inspector": "checker-b"},
+          {"event_id": "r-insp-9", "item": "lens-2", "version": 1, "serial": "ser-109", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-9", "inspector": "checker-b"},
+          {"event_id": "r-insp-10", "item": "camera-9", "version": 1, "serial": "ser-110", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-10", "inspector": "checker-a"},
+          {"event_id": "r-insp-11", "item": "watch-3", "version": 1, "serial": "ser-111", "functional": "pass", "cosmetic": "clean", "photo_sha": "r-photo-11", "inspector": "checker-b"}
+        ],
+        "prices": [
+          {"event_id": "r-price-7", "item": "camera-7", "version": 1, "amount": 10000, "at": "2026-05-15", "signer": "shop-a"},
+          {"event_id": "r-price-8", "item": "laptop-1", "version": 1, "amount": 8000, "at": "2026-05-18", "signer": "shop-a"},
+          {"event_id": "r-price-9", "item": "lens-2", "version": 1, "amount": 4500, "at": "2026-05-20", "signer": "shop-a"},
+          {"event_id": "r-price-10", "item": "camera-9", "version": 1, "amount": 9500, "at": "2026-05-22", "signer": "shop-a"},
+          {"event_id": "r-price-11", "item": "watch-3", "version": 1, "amount": 13000, "at": "2026-02-24", "signer": "shop-a"}
+        ]
+      },
+      "sale": {
+        "payments": [
+          {"event_id": "r-pay-7", "order_id": "r-order-7", "item": "camera-7", "amount": 10000, "paid_at": "2026-05-25", "provider": "bank"},
+          {"event_id": "r-pay-8", "order_id": "r-order-8", "item": "laptop-1", "amount": 8000, "paid_at": "2026-05-26", "provider": "bank"},
+          {"event_id": "r-pay-9", "order_id": "r-order-9", "item": "lens-2", "amount": 4500, "paid_at": "2026-05-27", "provider": "bank"},
+          {"event_id": "r-pay-10", "order_id": "r-order-10", "item": "camera-9", "amount": 9500, "paid_at": "2026-05-28", "provider": "bank"},
+          {"event_id": "r-pay-11", "order_id": "r-order-11", "item": "watch-3", "amount": 13000, "paid_at": "2026-03-20", "provider": "bank"}
+        ],
+        "deliveries": [
+          {"event_id": "r-del-7", "order_id": "r-order-7", "item": "camera-7", "serial": "ser-107", "buyer": "buyer-x", "signed_at": "2026-05-30"},
+          {"event_id": "r-del-8", "order_id": "r-order-8", "item": "laptop-1", "serial": "ser-108", "buyer": "buyer-y", "signed_at": "2026-05-31"},
+          {"event_id": "r-del-9", "order_id": "r-order-9", "item": "lens-2", "serial": "ser-109", "buyer": "buyer-w", "signed_at": "2026-06-02"},
+          {"event_id": "r-del-10", "order_id": "r-order-10", "item": "camera-9", "serial": "ser-110", "buyer": "buyer-v", "signed_at": "2026-06-03"},
+          {"event_id": "r-del-11", "order_id": "r-order-11", "item": "watch-3", "serial": "ser-111", "buyer": "buyer-u", "signed_at": "2026-03-25"}
+        ],
+        "claims": [
+          {"event_id": "r-claim-6", "order_id": "r-order-6", "item": "watch-2", "at": "2026-06-10", "reason": "movement defect", "photo_sha": "r-photo-claim-6"}
+        ]
+      },
+      "research": {
+        "items": [],
+        "aliases": [],
+        "consents": [
+          {"event_id": "r-con-9", "party_role": "owner", "party": "seller-a", "period": "p2", "scope": "cross-period-link", "granted_at": "2026-05-10", "signed_by": "seller-a"},
+          {"event_id": "r-con-10", "party_role": "owner", "party": "seller-b", "period": "p2", "scope": "cross-period-link", "granted_at": "2026-05-10", "signed_by": "seller-b"},
+          {"event_id": "r-con-11", "party_role": "owner", "party": "seller-e", "period": "p2", "scope": "period-stats", "granted_at": "2026-05-10", "signed_by": "seller-e"},
+          {"event_id": "r-con-12", "party_role": "owner", "party": "seller-d", "period": "p2", "scope": "cross-period-link", "granted_at": "2026-05-10", "signed_by": "seller-d"},
+          {"event_id": "r-con-13", "party_role": "buyer", "party": "buyer-x", "period": "p2", "scope": "cross-period-link", "granted_at": "2026-05-10", "signed_by": "buyer-x"},
+          {"event_id": "r-con-14", "party_role": "buyer", "party": "buyer-y", "period": "p2", "scope": "cross-period-link", "granted_at": "2026-05-10", "signed_by": "buyer-y"},
+          {"event_id": "r-con-15", "party_role": "buyer", "party": "buyer-w", "period": "p2", "scope": "period-stats", "granted_at": "2026-05-10", "signed_by": "buyer-w"},
+          {"event_id": "r-con-16", "party_role": "buyer", "party": "buyer-v", "period": "p2", "scope": "cross-period-link", "granted_at": "2026-05-10", "signed_by": "buyer-v"},
+          {"event_id": "r-con-17", "party_role": "owner", "party": "seller-f", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-10", "signed_by": "seller-f"},
+          {"event_id": "r-con-18", "party_role": "buyer", "party": "buyer-u", "period": "p1", "scope": "cross-period-link", "granted_at": "2026-02-10", "signed_by": "buyer-u"}
+        ],
+        "withdrawals": [
+          {"event_id": "r-wd-1", "party_role": "owner", "party": "seller-c", "at": "2026-06-01", "signed_by": "seller-c", "reason": "research sharing permission withdrawn"}
+        ]
+      }
+    }
+  ]
+}
