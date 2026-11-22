@@ -1,0 +1,28 @@
+{
+  "contracts": [
+    {
+      "source": "scanner-c",
+      "source_event_id": "contract-1",
+      "paper_sha": "paper-turnstile",
+      "item": "camera-2",
+      "version": 1,
+      "owner": "seller-c",
+      "serial": "serial-c",
+      "valid_from": "2026-11-01",
+      "valid_to": "2026-11-20",
+      "reserve_price": 4000,
+      "commission_pct": 10,
+      "signed_by": "seller-c"
+    }
+  ],
+  "proofs": [
+    {
+      "source": "scanner-c",
+      "source_event_id": "proof-1",
+      "item": "camera-2",
+      "serial": "serial-c",
+      "holder": "seller-c",
+      "issuer": "registry"
+    }
+  ]
+}

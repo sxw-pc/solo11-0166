@@ -1,0 +1,50 @@
+{
+  "contracts": [
+    {
+      "source": "scanner-a",
+      "source_event_id": "contract-1",
+      "paper_sha": "paper-real",
+      "item": "camera-1",
+      "version": 2,
+      "owner": "seller-a",
+      "serial": "serial-a",
+      "valid_from": "2026-11-01",
+      "valid_to": "2026-11-20",
+      "reserve_price": 8000,
+      "commission_pct": 10,
+      "signed_by": "seller-a"
+    },
+    {
+      "source": "scanner-b",
+      "source_event_id": "contract-1",
+      "paper_sha": "paper-real",
+      "item": "camera-1",
+      "version": 2,
+      "owner": "seller-a",
+      "serial": "serial-a",
+      "valid_from": "2026-11-01",
+      "valid_to": "2026-11-20",
+      "reserve_price": 9000,
+      "commission_pct": 10,
+      "signed_by": "seller-a"
+    }
+  ],
+  "proofs": [
+    {
+      "source": "scanner-a",
+      "source_event_id": "proof-1",
+      "item": "camera-1",
+      "serial": "serial-a",
+      "holder": "seller-a",
+      "issuer": "registry"
+    },
+    {
+      "source": "scanner-b",
+      "source_event_id": "proof-1",
+      "item": "camera-1",
+      "serial": "serial-a",
+      "holder": "seller-a",
+      "issuer": "registry"
+    }
+  ]
+}
