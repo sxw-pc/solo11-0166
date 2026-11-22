@@ -1,0 +1,118 @@
+{
+  "bulletins": [
+    {
+      "event_id": "bulletin-rb100-v1",
+      "source": "manufacturer-portal/2026/11/RB100-v1.pdf",
+      "bulletin_id": "RB100",
+      "version": 1,
+      "issued_at": "2026-11-08T09:00:00Z",
+      "model": "camera-r",
+      "ranges": [["BAT-2026-1000", "BAT-2026-1099"]],
+      "signed_by": "manufacturer-safety"
+    },
+    {
+      "event_id": "bulletin-rb100-v2",
+      "source": "manufacturer-portal/2026/11/RB100-v2-errata.pdf",
+      "bulletin_id": "RB100",
+      "version": 2,
+      "issued_at": "2026-11-15T09:00:00Z",
+      "model": "camera-r",
+      "ranges": [["BAT-2026-1020", "BAT-2026-1079"]],
+      "signed_by": "manufacturer-safety"
+    }
+  ],
+  "labels": [
+    {"event_id": "label-l1", "source": "intake-scan/2026-11-02/l1.jpg", "label_id": "L1", "model": "camera-r", "batch": "BAT-2026-1005", "scanned_at": "2026-11-02T10:00:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l2", "source": "intake-scan/2026-11-02/l2.jpg", "label_id": "L2", "model": "camera-r", "batch": "BAT-2026-1005", "scanned_at": "2026-11-02T10:05:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l3", "source": "intake-scan/2026-11-02/l3.jpg", "label_id": "L3", "model": "camera-r", "batch": null, "scanned_at": "2026-11-02T10:10:00Z", "scanner": "checker-a", "label_state": "worn"},
+    {"event_id": "label-l4", "source": "intake-scan/2026-11-02/l4.jpg", "label_id": "L4", "model": "camera-r", "batch": "BAT-2026-1050", "scanned_at": "2026-11-02T10:15:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l5", "source": "intake-scan/2026-11-02/l5.jpg", "label_id": "L5", "model": "camera-r", "batch": "BAT-2026-1055", "scanned_at": "2026-11-02T10:20:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l6", "source": "intake-scan/2026-11-02/l6.jpg", "label_id": "L6", "model": "camera-r", "batch": "BAT-2026-1001", "scanned_at": "2026-11-02T10:25:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l7", "source": "intake-scan/2026-11-02/l7.jpg", "label_id": "L7", "model": "camera-r", "batch": "BAT-2026-1050", "scanned_at": "2026-11-02T10:30:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l8", "source": "intake-scan/2026-11-02/l8.jpg", "label_id": "L8", "model": "camera-r", "batch": null, "scanned_at": "2026-11-02T10:35:00Z", "scanner": "checker-a", "label_state": "worn"},
+    {"event_id": "label-l9", "source": "intake-scan/2026-11-02/l9.jpg", "label_id": "L9", "model": "camera-r", "batch": "BAT-2026-1050", "scanned_at": "2026-11-02T10:40:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l10", "source": "intake-scan/2026-11-02/l10.jpg", "label_id": "L10", "model": "camera-r", "batch": "BAT-2026-1051", "scanned_at": "2026-11-02T10:45:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l11", "source": "intake-scan/2026-11-02/l11.jpg", "label_id": "L11", "model": "camera-r", "batch": "BAT-2026-1200", "scanned_at": "2026-11-02T10:50:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l12", "source": "intake-scan/2026-11-02/l12.jpg", "label_id": "L12", "model": "camera-r", "batch": "BAT-2026-1050", "scanned_at": "2026-11-02T10:55:00Z", "scanner": "checker-a", "label_state": "legible"},
+    {"event_id": "label-l13", "source": "service-scan/2026-11-06/l13.jpg", "label_id": "L13", "model": "camera-r", "batch": "BAT-2026-3100", "scanned_at": "2026-11-06T14:00:00Z", "scanner": "service-desk", "label_state": "legible"},
+    {"event_id": "label-l14", "source": "service-scan/2026-11-12/l14.jpg", "label_id": "L14", "model": "camera-r", "batch": "BAT-2026-3100", "scanned_at": "2026-11-12T14:00:00Z", "scanner": "service-desk", "label_state": "legible"}
+  ],
+  "mounts": [
+    {"event_id": "mount-m1", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L1", "item": "camera-r1", "serial": "SN-R1", "mounted_at": "2026-11-02T11:00:00Z"},
+    {"event_id": "mount-m2", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L2", "item": "camera-r2", "serial": "SN-R2", "mounted_at": "2026-11-02T11:05:00Z"},
+    {"event_id": "mount-m3", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L3", "item": "camera-r3", "serial": "SN-R3", "mounted_at": "2026-11-02T11:10:00Z"},
+    {"event_id": "mount-m4", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L4", "item": "camera-r4", "serial": "SN-R4", "mounted_at": "2026-11-02T11:15:00Z"},
+    {"event_id": "mount-m5a", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L5", "item": "camera-r5", "serial": "SN-R5", "mounted_at": "2026-11-02T11:20:00Z", "dismounted_at": "2026-11-09T08:00:00Z"},
+    {"event_id": "mount-m5b", "source": "service-log/2026-11-09/transfer.json", "label_id": "L5", "item": "camera-r6", "serial": "SN-R6", "mounted_at": "2026-11-09T09:00:00Z"},
+    {"event_id": "mount-m6", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L6", "item": "camera-r6", "serial": "SN-R6", "mounted_at": "2026-11-02T11:25:00Z"},
+    {"event_id": "mount-m7a", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L7", "item": "camera-r7", "serial": "SN-R7", "mounted_at": "2026-11-02T11:30:00Z"},
+    {"event_id": "mount-m7b", "source": "service-log/2026-11-10/duplicate.json", "label_id": "L7", "item": "camera-r8", "serial": "SN-R8", "mounted_at": "2026-11-10T09:00:00Z"},
+    {"event_id": "mount-m8", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L8", "item": "camera-r7", "serial": "SN-R7", "mounted_at": "2026-11-02T11:35:00Z"},
+    {"event_id": "mount-m9", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L9", "item": "camera-r9", "serial": "SN-R9", "mounted_at": "2026-11-02T11:40:00Z"},
+    {"event_id": "mount-m10", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L10", "item": "camera-r1", "serial": "SN-R1", "mounted_at": "2026-11-02T11:45:00Z"},
+    {"event_id": "mount-m11", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L11", "item": "camera-r2", "serial": "SN-R2", "mounted_at": "2026-11-02T11:50:00Z"},
+    {"event_id": "mount-m12", "source": "intake-scan/2026-11-02/mounts.json", "label_id": "L12", "item": "camera-r10", "serial": "SN-R10", "mounted_at": "2026-11-02T11:55:00Z"},
+    {"event_id": "mount-m13", "source": "service-scan/2026-11-06/mount.json", "label_id": "L13", "item": "camera-r9", "serial": "SN-R9", "mounted_at": "2026-11-06T14:30:00Z"},
+    {"event_id": "mount-m14", "source": "service-scan/2026-11-12/mount.json", "label_id": "L14", "item": "camera-r10", "serial": "SN-R10", "mounted_at": "2026-11-12T14:30:00Z"}
+  ],
+  "rescans": [
+    {
+      "event_id": "rescan-l3-dual",
+      "source": "service-log/2026-11-10/l3-dual-rescan.json",
+      "label_id": "L3",
+      "item": "camera-r3",
+      "batch": "BAT-2026-1040",
+      "scanned_at": "2026-11-10T15:00:00Z",
+      "scanners": ["checker-a", "checker-b"]
+    },
+    {
+      "event_id": "rescan-l8-solo",
+      "source": "service-log/2026-11-10/l8-solo-guess.json",
+      "label_id": "L8",
+      "item": "camera-r7",
+      "batch": "BAT-2026-1040",
+      "scanned_at": "2026-11-10T16:00:00Z",
+      "scanners": ["checker-a"]
+    }
+  ],
+  "replacements": [
+    {
+      "event_id": "repl-r9-presale",
+      "source": "manufacturer-service/2026-11-06/r9-replacement.pdf",
+      "item": "camera-r9",
+      "serial": "SN-R9",
+      "old_label_id": "L9",
+      "new_label_id": "L13",
+      "new_batch": "BAT-2026-3100",
+      "effective_at": "2026-11-06T15:00:00Z",
+      "signed_by": "manufacturer-service"
+    },
+    {
+      "event_id": "repl-r10-latedelivery",
+      "source": "manufacturer-service/2026-11-12/r10-replacement.pdf",
+      "item": "camera-r10",
+      "serial": "SN-R10",
+      "old_label_id": "L12",
+      "new_label_id": "L14",
+      "new_batch": "BAT-2026-3100",
+      "effective_at": "2026-11-12T15:00:00Z",
+      "signed_by": "manufacturer-service"
+    }
+  ],
+  "receipts": [
+    {
+      "event_id": "receipt-r4-v2",
+      "source": "sms-gateway/2026-11-16/r4-dlr.json",
+      "notice_event_id": "recall-notice:RB100:v2:camera-r4",
+      "received_at": "2026-11-16T10:00:00Z",
+      "channel": "sms"
+    },
+    {
+      "event_id": "receipt-r10-v1",
+      "source": "sms-gateway/2026-11-09/r10-dlr.json",
+      "notice_event_id": "recall-notice:RB100:v1:camera-r10",
+      "received_at": "2026-11-09T10:05:00Z",
+      "channel": "sms"
+    }
+  ]
+}
