@@ -7,7 +7,9 @@ def decide(db,item):
     inspections=db.execute('SELECT * FROM inspection WHERE item=? ORDER BY version DESC,event_id',(item,)).fetchall()
     prices=db.execute('SELECT * FROM price WHERE item=? ORDER BY version DESC,event_id',(item,)).fetchall()
     amount=0;inspection_id=None
+    delisting=db.execute('SELECT * FROM delisting WHERE item=? ORDER BY at DESC,event_id LIMIT 1',(item,)).fetchone()
     if not title or title['state']!='approved':state,reason='blocked','owner title or current mandate not approved'
+    elif delisting:state,reason='blocked','re-inspection review pulled the item off public sale'
     elif not inspections:state,reason='pending','condition inspection missing'
     elif not prices:state,reason='pending','public listing price missing'
     else:
@@ -41,5 +43,9 @@ def import_data(db,data):
         for row in data.get('prices',[]):
             if record(db,row['event_id'],'price',row):
                 db.execute('INSERT INTO price VALUES(?,?,?,?,?,?)',(row['event_id'],row['item'],row['version'],row['amount'],row['at'],row['signer']))
+            touched.add(row['item'])
+        for row in data.get('delistings',[]):
+            if record(db,row['event_id'],'delisting',row):
+                db.execute('INSERT INTO delisting VALUES(?,?,?,?,?)',(row['event_id'],row['item'],row['at'],row['signed_by'],row['reason']))
             touched.add(row['item'])
         return [decide(db,item) for item in sorted(touched)]

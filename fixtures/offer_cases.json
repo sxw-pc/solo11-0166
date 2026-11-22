@@ -1,0 +1,165 @@
+{
+  "reprice_grade": {
+    "inspections": [
+      {"event_id": "insp-rp-1", "item": "camera-1", "version": 1, "serial": "serial-a", "functional": "pass", "cosmetic": "minor-scuff", "photo_sha": "photo-a", "inspector": "checker-a"}
+    ],
+    "prices": [
+      {"event_id": "price-1", "item": "camera-1", "version": 1, "amount": 10000, "at": "2026-11-02", "signer": "shop-a"},
+      {"event_id": "price-rp-2", "item": "camera-1", "version": 2, "amount": 9000, "at": "2026-11-06", "signer": "shop-a"}
+    ]
+  },
+  "reprice_offer": {
+    "offers": [
+      {"event_id": "offer-rp", "order_id": "order-rp", "item": "camera-1", "serial": "serial-a", "amount": 9000, "buyer": "buyer-b", "valid_from": "2026-11-05", "valid_to": "2026-11-08", "route": "reprice", "accepted_at": "2026-11-06"}
+    ],
+    "owner_authorizations": [
+      {"event_id": "auth-rp", "order_id": "order-rp", "item": "camera-1", "kind": "reprice", "amount": 9000, "reserve_price": 8000, "valid_from": "2026-11-05", "valid_to": "2026-11-10", "signed_by": "seller-a", "signed_at": "2026-11-05"}
+    ]
+  },
+  "reprice_sale": {
+    "payments": [
+      {"event_id": "pay-rp-1", "order_id": "order-rp", "item": "camera-1", "amount": 4000, "paid_at": "2026-11-07", "provider": "bank", "payer": "buyer-b"},
+      {"event_id": "pay-rp-2", "order_id": "order-rp", "item": "camera-1", "amount": 5000, "paid_at": "2026-11-08", "provider": "bank", "payer": "buyer-b"}
+    ],
+    "deliveries": [
+      {"event_id": "del-rp", "order_id": "order-rp", "item": "camera-1", "serial": "serial-a", "buyer": "buyer-b", "signed_at": "2026-11-08"}
+    ]
+  },
+  "protect_grade": {
+    "inspections": [
+      {"event_id": "insp-pt-1", "item": "camera-1", "version": 1, "serial": "serial-a", "functional": "pass", "cosmetic": "minor-scuff", "photo_sha": "photo-a", "inspector": "checker-a"}
+    ],
+    "prices": [
+      {"event_id": "price-1", "item": "camera-1", "version": 1, "amount": 10000, "at": "2026-11-02", "signer": "shop-a"}
+    ]
+  },
+  "protect_offer": {
+    "offers": [
+      {"event_id": "offer-pt", "order_id": "order-pt", "item": "camera-1", "serial": "serial-a", "amount": 9000, "buyer": "buyer-c", "valid_from": "2026-11-05", "valid_to": "2026-11-08", "route": "protect", "accepted_at": "2026-11-06"}
+    ],
+    "owner_authorizations": [
+      {"event_id": "auth-pt", "order_id": "order-pt", "item": "camera-1", "kind": "protect", "amount": 10000, "reserve_price": 8000, "valid_from": "2026-11-05", "valid_to": "2026-11-10", "signed_by": "seller-a", "signed_at": "2026-11-05"}
+    ],
+    "shop_commitments": [
+      {"event_id": "commit-pt", "order_id": "order-pt", "item": "camera-1", "amount": 1000, "fund_account": "shop-a-topup-acct", "signed_by": "shop-a", "signed_at": "2026-11-06"}
+    ]
+  },
+  "protect_topup_missing": {
+    "offers": [
+      {"event_id": "offer-pt-noflow", "order_id": "order-pt-noflow", "item": "camera-1", "serial": "serial-a", "amount": 9000, "buyer": "buyer-c", "valid_from": "2026-11-05", "valid_to": "2026-11-08", "route": "protect", "accepted_at": "2026-11-06"}
+    ],
+    "owner_authorizations": [
+      {"event_id": "auth-pt-noflow", "order_id": "order-pt-noflow", "item": "camera-1", "kind": "protect", "amount": 10000, "reserve_price": 8000, "valid_from": "2026-11-05", "valid_to": "2026-11-10", "signed_by": "seller-a", "signed_at": "2026-11-05"}
+    ],
+    "shop_commitments": [
+      {"event_id": "commit-pt-noflow", "order_id": "order-pt-noflow", "item": "camera-1", "amount": 1000, "fund_account": "shop-a-topup-acct", "signed_by": "shop-a", "signed_at": "2026-11-06"}
+    ]
+  },
+  "protect_sale_no_flow": {
+    "payments": [
+      {"event_id": "pay-pt-noflow", "order_id": "order-pt-noflow", "item": "camera-1", "amount": 9000, "paid_at": "2026-11-07", "provider": "bank", "payer": "buyer-c"}
+    ],
+    "deliveries": [
+      {"event_id": "del-pt-noflow", "order_id": "order-pt-noflow", "item": "camera-1", "serial": "serial-a", "buyer": "buyer-c", "signed_at": "2026-11-08"}
+    ]
+  },
+  "protect_flow": {
+    "topup_payments": [
+      {"event_id": "topup-pt", "order_id": "order-pt", "item": "camera-1", "amount": 1000, "paid_at": "2026-11-07", "provider": "bank", "payer": "shop-a-topup-acct", "flow_ref": "flow-topup-0001", "commitment_id": "commit-pt"}
+    ]
+  },
+  "protect_sale": {
+    "payments": [
+      {"event_id": "pay-pt", "order_id": "order-pt", "item": "camera-1", "amount": 9000, "paid_at": "2026-11-07", "provider": "bank", "payer": "buyer-c"}
+    ],
+    "deliveries": [
+      {"event_id": "del-pt", "order_id": "order-pt", "item": "camera-1", "serial": "serial-a", "buyer": "buyer-c", "signed_at": "2026-11-08"}
+    ]
+  },
+  "protect_refund": {
+    "refunds": [
+      {"event_id": "refund-pt", "order_id": "order-pt", "item": "camera-1", "amount": 1000, "refunded_at": "2026-11-10", "provider": "bank", "payer": "buyer-c", "source_payment_id": "pay-pt"}
+    ]
+  },
+  "markdown_unauthorized_grade": {
+    "inspections": [
+      {"event_id": "insp-md-1", "item": "camera-1", "version": 1, "serial": "serial-a", "functional": "pass", "cosmetic": "minor-scuff", "photo_sha": "photo-a", "inspector": "checker-a"}
+    ],
+    "prices": [
+      {"event_id": "price-1", "item": "camera-1", "version": 1, "amount": 10000, "at": "2026-11-02", "signer": "shop-a"},
+      {"event_id": "price-md-2", "item": "camera-1", "version": 2, "amount": 9000, "at": "2026-11-06", "signer": "shop-a"}
+    ]
+  },
+  "store_promise_as_payment": {
+    "offers": [
+      {"event_id": "offer-fake", "order_id": "order-fake", "item": "camera-1", "serial": "serial-a", "amount": 9000, "buyer": "buyer-d", "valid_from": "2026-11-05", "valid_to": "2026-11-08", "route": "reprice", "accepted_at": "2026-11-06"}
+    ],
+    "owner_authorizations": [
+      {"event_id": "auth-fake", "order_id": "order-fake", "item": "camera-1", "kind": "reprice", "amount": 9000, "reserve_price": 8000, "valid_from": "2026-11-05", "valid_to": "2026-11-10", "signed_by": "seller-a", "signed_at": "2026-11-05"}
+    ],
+    "payments": [
+      {"event_id": "pay-fake", "order_id": "order-fake", "item": "camera-1", "amount": 9000, "paid_at": "2026-11-07", "provider": "store", "payer": "clerk-verbal"}
+    ],
+    "deliveries": [
+      {"event_id": "del-fake", "order_id": "order-fake", "item": "camera-1", "serial": "serial-a", "buyer": "buyer-d", "signed_at": "2026-11-08"}
+    ]
+  },
+  "revocation_before_second_order": {
+    "offers": [
+      {"event_id": "offer-ok", "order_id": "order-ok", "item": "camera-1", "serial": "serial-a", "amount": 9000, "buyer": "buyer-e", "valid_from": "2026-11-03", "valid_to": "2026-11-06", "route": "reprice", "accepted_at": "2026-11-04"},
+      {"event_id": "offer-late", "order_id": "order-late", "item": "camera-1", "serial": "serial-a", "amount": 9000, "buyer": "buyer-f", "valid_from": "2026-11-04", "valid_to": "2026-11-12", "route": "reprice", "accepted_at": "2026-11-07"}
+    ],
+    "owner_authorizations": [
+      {"event_id": "auth-ok", "order_id": "order-ok", "item": "camera-1", "kind": "reprice", "amount": 9000, "reserve_price": 8000, "valid_from": "2026-11-03", "valid_to": "2026-11-12", "signed_by": "seller-a", "signed_at": "2026-11-03"},
+      {"event_id": "auth-late", "order_id": "order-late", "item": "camera-1", "kind": "reprice", "amount": 9000, "reserve_price": 8000, "valid_from": "2026-11-03", "valid_to": "2026-11-12", "signed_by": "seller-a", "signed_at": "2026-11-03"}
+    ]
+  },
+  "revocation_event": {
+    "revocations": [
+      {"event_id": "revoke-offer-1", "item": "camera-1", "at": "2026-11-06", "signed_by": "seller-a", "reason": "mandate withdrawn"}
+    ]
+  },
+  "revocation_sale": {
+    "payments": [
+      {"event_id": "pay-ok", "order_id": "order-ok", "item": "camera-1", "amount": 9000, "paid_at": "2026-11-05", "provider": "bank", "payer": "buyer-e"},
+      {"event_id": "pay-late", "order_id": "order-late", "item": "camera-1", "amount": 9000, "paid_at": "2026-11-07", "provider": "bank", "payer": "buyer-f"}
+    ],
+    "deliveries": [
+      {"event_id": "del-ok", "order_id": "order-ok", "item": "camera-1", "serial": "serial-a", "buyer": "buyer-e", "signed_at": "2026-11-05"},
+      {"event_id": "del-late", "order_id": "order-late", "item": "camera-1", "serial": "serial-a", "buyer": "buyer-f", "signed_at": "2026-11-08"}
+    ]
+  },
+  "delisting_before_second_order": {
+    "delistings": [
+      {"event_id": "delist-offer-1", "item": "camera-1", "at": "2026-11-06", "signed_by": "checker-a", "reason": "re-inspection found functional defect"}
+    ]
+  },
+  "expired_offer": {
+    "offers": [
+      {"event_id": "offer-exp", "order_id": "order-exp", "item": "camera-1", "serial": "serial-a", "amount": 9000, "buyer": "buyer-g", "valid_from": "2026-11-03", "valid_to": "2026-11-05", "route": "reprice", "accepted_at": "2026-11-06"}
+    ],
+    "owner_authorizations": [
+      {"event_id": "auth-exp", "order_id": "order-exp", "item": "camera-1", "kind": "reprice", "amount": 9000, "reserve_price": 8000, "valid_from": "2026-11-03", "valid_to": "2026-11-10", "signed_by": "seller-a", "signed_at": "2026-11-03"}
+    ],
+    "payments": [
+      {"event_id": "pay-exp", "order_id": "order-exp", "item": "camera-1", "amount": 9000, "paid_at": "2026-11-07", "provider": "bank", "payer": "buyer-g"}
+    ],
+    "deliveries": [
+      {"event_id": "del-exp", "order_id": "order-exp", "item": "camera-1", "serial": "serial-a", "buyer": "buyer-g", "signed_at": "2026-11-08"}
+    ]
+  },
+  "topup_flow_reuse": {
+    "offers": [
+      {"event_id": "offer-reuse", "order_id": "order-reuse", "item": "camera-1", "serial": "serial-a", "amount": 9000, "buyer": "buyer-h", "valid_from": "2026-11-05", "valid_to": "2026-11-08", "route": "protect", "accepted_at": "2026-11-06"}
+    ],
+    "owner_authorizations": [
+      {"event_id": "auth-reuse", "order_id": "order-reuse", "item": "camera-1", "kind": "protect", "amount": 10000, "reserve_price": 8000, "valid_from": "2026-11-05", "valid_to": "2026-11-10", "signed_by": "seller-a", "signed_at": "2026-11-05"}
+    ],
+    "shop_commitments": [
+      {"event_id": "commit-reuse", "order_id": "order-reuse", "item": "camera-1", "amount": 1000, "fund_account": "shop-a-topup-acct", "signed_by": "shop-a", "signed_at": "2026-11-06"}
+    ],
+    "topup_payments": [
+      {"event_id": "topup-reuse", "order_id": "order-reuse", "item": "camera-1", "amount": 1000, "paid_at": "2026-11-07", "provider": "bank", "payer": "shop-a-topup-acct", "flow_ref": "flow-topup-0001", "commitment_id": "commit-reuse"}
+    ]
+  }
+}

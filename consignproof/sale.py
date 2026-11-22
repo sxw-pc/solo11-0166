@@ -1,7 +1,22 @@
 from .source import record
 from .store import update
 
+def mirror_item(db,item):
+    orders=db.execute('SELECT * FROM offer_decision WHERE item=? ORDER BY accepted_at DESC,order_id DESC',(item,)).fetchall()
+    if not orders:return None
+    rep=orders[0]
+    owner_amount=sum(r['owner_amount'] for r in orders)
+    commission=sum(r['nominal_commission'] for r in orders)
+    frozen=sum(r['frozen'] for r in orders)
+    reason='; '.join(f"{r['order_id']}:{r['state']}({r['route']})" for r in orders)
+    return update(db,'sale_decision',item,state=rep['state'],reason=reason,
+                  owner_amount=owner_amount,commission=commission,frozen=frozen)
 def decide(db,item):
+    if db.execute('SELECT 1 FROM offer WHERE item=? LIMIT 1',(item,)).fetchone():
+        from .offer import decide_order
+        for row in db.execute('SELECT DISTINCT order_id FROM offer WHERE item=? ORDER BY order_id',(item,)).fetchall():
+            decide_order(db,row['order_id'])
+        return mirror_item(db,item)
     title=db.execute('SELECT * FROM title_decision WHERE item=?',(item,)).fetchone()
     listing=db.execute('SELECT * FROM listing_decision WHERE item=?',(item,)).fetchone()
     payments=db.execute('SELECT * FROM payment WHERE item=? ORDER BY paid_at DESC,event_id',(item,)).fetchall()
@@ -42,7 +57,8 @@ def import_data(db,data):
     with db:
         for row in data.get('payments',[]):
             if record(db,row['event_id'],'payment',row):
-                db.execute('INSERT INTO payment VALUES(?,?,?,?,?,?)',(row['event_id'],row['order_id'],row['item'],row['amount'],row['paid_at'],row['provider']))
+                db.execute('INSERT INTO payment(event_id,order_id,item,amount,paid_at,provider,payer) VALUES(?,?,?,?,?,?,?)',
+                           (row['event_id'],row['order_id'],row['item'],row['amount'],row['paid_at'],row['provider'],row.get('payer')))
             touched.add(row['item'])
         for row in data.get('deliveries',[]):
             if record(db,row['event_id'],'delivery',row):
@@ -51,5 +67,14 @@ def import_data(db,data):
         for row in data.get('claims',[]):
             if record(db,row['event_id'],'claim',row):
                 db.execute('INSERT INTO return_claim VALUES(?,?,?,?,?,?)',(row['event_id'],row['order_id'],row['item'],row['at'],row['reason'],row['photo_sha']))
+            touched.add(row['item'])
+        for row in data.get('refunds',[]):
+            if record(db,row['event_id'],'refund',row):
+                if not db.execute('SELECT 1 FROM payment WHERE event_id=? AND order_id=?',
+                                  (row['source_payment_id'],row['order_id'])).fetchone():
+                    raise ValueError(f"refund lacks source payment: {row['event_id']}")
+                db.execute('INSERT INTO refund VALUES(?,?,?,?,?,?,?,?)',
+                           (row['event_id'],row['order_id'],row['item'],row['amount'],row['refunded_at'],
+                            row['provider'],row.get('payer'),row['source_payment_id']))
             touched.add(row['item'])
         return [decide(db,item) for item in sorted(touched)]
