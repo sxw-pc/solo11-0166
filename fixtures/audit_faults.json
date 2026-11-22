@@ -1,0 +1,99 @@
+{
+  "faults": {
+    "contract_body_rewrite": {
+      "id": "contract_body_rewrite",
+      "description": "contract-1 evidence.body was locally replaced with {} while the sha column and all decisions still reflect the imported contract",
+      "steps": [
+        {"op": "evidence_set", "event_id": "contract-1", "fields": {"body": "{}"}}
+      ],
+      "expect": {
+        "audit_status": "compromised",
+        "fault_type": "evidence_mismatch",
+        "affected_event": "contract-1",
+        "affected_item": "camera-1",
+        "rebuild_possible": true,
+        "dependent_decisions": ["title", "listing", "sale"]
+      }
+    },
+    "contract_body_kind_rewrite": {
+      "id": "contract_body_kind_rewrite",
+      "description": "contract-1 body and digest were rewritten together and its kind was changed away from consignment",
+      "steps": [
+        {"op": "evidence_set", "event_id": "contract-1", "fields": {"kind": "inspection", "sha": "8e7f4d2f0f30f0d9d0e8c0b1a2", "body": "{}"}}
+      ],
+      "expect": {
+        "audit_status": "compromised",
+        "fault_type": "evidence_mismatch",
+        "affected_event": "contract-1",
+        "affected_item": "camera-1",
+        "rebuild_possible": true
+      }
+    },
+    "contract_evidence_deleted": {
+      "id": "contract_evidence_deleted",
+      "description": "contract-1 evidence row disappeared while the journal original is still intact",
+      "steps": [
+        {"op": "evidence_delete", "event_id": "contract-1"}
+      ],
+      "expect": {
+        "audit_status": "compromised",
+        "fault_type": "evidence_missing",
+        "affected_event": "contract-1",
+        "affected_item": "camera-1",
+        "rebuild_possible": true
+      }
+    },
+    "journal_bytes_rewritten": {
+      "id": "journal_bytes_rewritten",
+      "description": "file_journal.raw for the contract source was rewritten (compact encoding, whitespace dropped) but its sha column still holds the import-time digest",
+      "steps": [
+        {"op": "journal_rewrite", "kind": "consign-import", "text": "{\n  \"contracts\": [{\"event_id\": \"contract-1\", \"item\": \"camera-1\", \"version\": 1, \"owner\": \"seller-a\", \"serial\": \"serial-a\", \"valid_from\": \"2026-11-01\", \"valid_to\": \"2026-11-20\", \"reserve_price\": 8000, \"commission_pct\": 10, \"signed_by\": \"seller-a\"}],\n  \"proofs\": [{\"event_id\": \"proof-1\", \"item\": \"camera-1\", \"serial\": \"serial-a\", \"holder\": \"seller-a\", \"issuer\": \"registry\"}]\n}"}
+      ],
+      "expect": {
+        "audit_status": "compromised",
+        "fault_type": "journal_corrupt",
+        "affected_event": "contract-1",
+        "affected_item": "camera-1",
+        "rebuild_possible": false
+      }
+    },
+    "journal_copy_only": {
+      "id": "journal_copy_only",
+      "description": "the attested original is gone and only an identical-content copy from another path remains in file_journal",
+      "steps": [
+        {"op": "journal_make_copy_only", "kind": "consign-import", "origin": "/backup/copied-consign_ok.json"}
+      ],
+      "expect": {
+        "audit_status": "compromised",
+        "fault_type": "evidence_mismatch",
+        "affected_event": "contract-1",
+        "affected_item": "camera-1",
+        "rebuild_possible": false
+      }
+    },
+    "interrupted_rebuild": {
+      "id": "interrupted_rebuild",
+      "description": "a rebuild is interrupted after it starts; the test supplies the crash through recover(interrupt=...) and then re-audits",
+      "steps": [
+        {"op": "evidence_set", "event_id": "contract-1", "fields": {"body": "{}"}}
+      ],
+      "expect": {
+        "interrupted": true,
+        "audit_status_after_failure": "compromised",
+        "audit_status_after_retry": "matched",
+        "fault_type": "evidence_mismatch",
+        "affected_event": "contract-1",
+        "affected_item": "camera-1"
+      }
+    }
+  },
+  "items": {
+    "camera-1": {"kind": "consign-import", "file": "consign_ok.json"},
+    "lens-2": {"kind": "consign-import", "file": "consign_multi_ok.json"}
+  },
+  "unaffected_item": {
+    "item": "lens-2",
+    "file": "consign_multi_ok.json",
+    "import": "consign-import"
+  }
+}

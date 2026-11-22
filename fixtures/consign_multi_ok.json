@@ -1,0 +1,1 @@
+{"contracts":[{"event_id":"contract-lens","item":"lens-2","version":1,"owner":"seller-b","serial":"serial-b","valid_from":"2026-11-01","valid_to":"2026-11-20","reserve_price":3000,"commission_pct":5,"signed_by":"seller-b"}],"proofs":[{"event_id":"proof-lens","item":"lens-2","serial":"serial-b","holder":"seller-b","issuer":"registry"}]}
