@@ -1,0 +1,27 @@
+{
+  "kind": "receipts",
+  "batch_id": "receipts-r1",
+  "receipts": [
+    {
+      "receipt_id": "rcv-1002-v1",
+      "listing_id": "ext-1002",
+      "request_version": 1,
+      "state": "received",
+      "at": "2026-11-03T13:00:00Z"
+    },
+    {
+      "receipt_id": "apd-1002-v1",
+      "listing_id": "ext-1002",
+      "request_version": 1,
+      "state": "applied",
+      "at": "2026-11-04T09:30:00Z"
+    },
+    {
+      "receipt_id": "apd-1003-old",
+      "listing_id": "ext-1003",
+      "request_version": 1,
+      "state": "applied",
+      "at": "2026-11-04T10:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "batch_id": "batch-regrade-1",
+  "entry_url": "https://partners.example.test/listings?cursor=regrade-1",
+  "entry_cursor": "regrade-1",
+  "routes": [
+    {"url": "https://partners.example.test/listings?cursor=regrade-1", "file": "page_regrade.json", "content_type": "application/json"}
+  ]
+}

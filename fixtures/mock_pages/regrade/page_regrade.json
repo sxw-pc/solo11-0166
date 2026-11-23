@@ -1,0 +1,19 @@
+{
+  "kind": "listing_page",
+  "cursor": "regrade-1",
+  "next_cursor": null,
+  "page_updated_at": "2026-11-04T08:00:00Z",
+  "listings": [
+    {
+      "event_id": "extv-1001-3",
+      "listing_id": "ext-1001",
+      "page_version": 3,
+      "shop_account": "partner-shop-p",
+      "channel": "partner-platform",
+      "serial": "serial-a",
+      "photo_shas": ["photo-b"],
+      "published_at": "2026-11-04T10:00:00Z",
+      "updated_at": "2026-11-04T10:00:00Z"
+    }
+  ]
+}

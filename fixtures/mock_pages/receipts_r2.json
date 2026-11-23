@@ -1,0 +1,13 @@
+{
+  "kind": "receipts",
+  "batch_id": "receipts-r2",
+  "receipts": [
+    {
+      "receipt_id": "rcv-1003-v2",
+      "listing_id": "ext-1003",
+      "request_version": 2,
+      "state": "received",
+      "at": "2026-11-08T09:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "batch_id": "batch-conflict-1",
+  "entry_url": "https://partners.example.test/listings?cursor=conflict-1",
+  "entry_cursor": "conflict-1",
+  "routes": [
+    {"url": "https://partners.example.test/listings?cursor=conflict-1", "file": "page_conflict.json", "content_type": "application/json"}
+  ]
+}

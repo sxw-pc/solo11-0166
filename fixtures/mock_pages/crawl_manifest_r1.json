@@ -1,0 +1,8 @@
+{
+  "batch_id": "batch-2026-11-04-r1",
+  "entry_url": "https://partners.example.test/receipts/batch-r1",
+  "entry_cursor": null,
+  "routes": [
+    {"url": "https://partners.example.test/receipts/batch-r1", "file": "receipts_r1.json", "content_type": "application/json"}
+  ]
+}

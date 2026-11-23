@@ -1,0 +1,11 @@
+{
+  "batch_id": "batch-2026-11-03-a",
+  "entry_url": "https://partners.example.test/listings?cursor=cur-1",
+  "entry_cursor": "cur-1",
+  "routes": [
+    {"url": "https://partners.example.test/listings?cursor=cur-1", "file": "page_1.json", "content_type": "application/json"},
+    {"url": "https://partners.example.test/listings?cursor=cur-2", "file": "page_2.html", "content_type": "text/html"},
+    {"url": "https://partners.example.test/listings?cursor=cur-2-repeat", "file": "page_3.html", "content_type": "text/html"},
+    {"url": "https://partners.example.test/receipts/batch-r1", "file": "receipts_r1.json", "content_type": "application/json"}
+  ]
+}

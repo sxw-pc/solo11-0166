@@ -1,0 +1,39 @@
+{
+  "permits": [
+    {
+      "event_id": "permit-1",
+      "permit_version": 1,
+      "item": "camera-1",
+      "shop_account": "partner-shop-p",
+      "channel": "partner-platform",
+      "photo_shas": ["photo-a"],
+      "valid_from": "2026-11-01T00:00:00Z",
+      "valid_to": "2026-11-19T23:59:59Z",
+      "signed_by": "seller-a"
+    }
+  ],
+  "reports": [
+    {
+      "event_id": "report-1",
+      "item": "camera-1",
+      "shop_account": "rogue-shop-r",
+      "channel": "partner-platform",
+      "listing_ids": ["ext-1002"],
+      "at": "2026-11-03T12:00:00Z",
+      "ticket_id": "ticket-r-1002",
+      "platform_ack": "received",
+      "signed_by": "seller-a"
+    },
+    {
+      "event_id": "report-2",
+      "item": "camera-1",
+      "shop_account": "partner-shop-p",
+      "channel": "partner-platform",
+      "listing_ids": ["ext-1003"],
+      "at": "2026-11-07T12:00:00Z",
+      "ticket_id": "ticket-r-1003",
+      "platform_ack": "received",
+      "signed_by": "seller-a"
+    }
+  ]
+}
