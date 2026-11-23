@@ -1,0 +1,29 @@
+{
+  "sessions": [
+    {"session_id": "ST-001", "device_id": "gun-1", "area": "shelf", "opened_at": "2026-11-08T08:00", "closed_at": "2026-11-08T10:00", "clock_offset_min": 0, "area_seal_sha": "seal-shelf", "operators": ["staff-1"]},
+    {"session_id": "ST-002", "device_id": "gun-2", "area": "backroom", "opened_at": "2026-11-08T10:30", "closed_at": "2026-11-08T11:30", "clock_offset_min": 0, "area_seal_sha": "seal-back", "operators": ["staff-2"]},
+    {"session_id": "ST-003", "device_id": "gun-1", "area": "loading-bay", "opened_at": "2026-11-08T12:00", "closed_at": "2026-11-08T13:00", "clock_offset_min": 0, "area_seal_sha": "seal-loading", "operators": ["staff-1", "carrier-x"]},
+    {"session_id": "ST-004", "device_id": "gun-2", "area": "floor", "opened_at": "2026-11-08T15:00", "closed_at": "2026-11-08T16:00", "clock_offset_min": 0, "area_seal_sha": "seal-floor", "operators": ["staff-3"]},
+    {"session_id": "ST-005", "device_id": "gun-1", "area": "counter", "opened_at": "2026-11-08T09:00", "closed_at": "2026-11-08T09:55", "clock_offset_min": -60, "area_seal_sha": "seal-counter", "operators": ["staff-1"]}
+  ],
+  "scans": [
+    {"event_id": "scan-l3-floor-stray", "session_id": "ST-004", "device_id": "gun-2", "area": "floor", "serial": "serial-l3", "scanned_at": "2026-11-08T15:20", "barcode": "BC-l3"},
+    {"event_id": "scan-l1-shelf-1", "session_id": "ST-001", "device_id": "gun-1", "area": "shelf", "serial": "serial-l1", "scanned_at": "2026-11-08T08:30", "barcode": "BC-l1"},
+    {"event_id": "scan-l5-shelf", "session_id": "ST-001", "device_id": "gun-1", "area": "shelf", "serial": "serial-l5", "scanned_at": "2026-11-08T08:40", "barcode": "BC-l5"},
+    {"event_id": "scan-l4-counter-slow", "session_id": "ST-005", "device_id": "gun-1", "area": "counter", "serial": "serial-l4", "scanned_at": "2026-11-08T09:40", "barcode": "BC-l4"},
+    {"event_id": "scan-l8-shelf", "session_id": "ST-001", "device_id": "gun-1", "area": "shelf", "serial": "serial-l8", "scanned_at": "2026-11-08T08:55", "barcode": "BC-l8"},
+    {"event_id": "scan-l3-load", "session_id": "ST-003", "device_id": "gun-1", "area": "loading-bay", "serial": "serial-l3", "scanned_at": "2026-11-08T12:20", "barcode": "BC-l3"},
+    {"event_id": "scan-l1-shelf-dup", "session_id": "ST-001", "device_id": "gun-1", "area": "shelf", "serial": "serial-l1", "scanned_at": "2026-11-08T08:31", "barcode": "BC-l1"},
+    {"event_id": "scan-l7-shelf-1", "session_id": "ST-001", "device_id": "gun-1", "area": "shelf", "serial": "serial-l7", "scanned_at": "2026-11-08T08:50", "barcode": "BC-l7"},
+    {"event_id": "scan-l6-shelf", "session_id": "ST-001", "device_id": "gun-1", "area": "shelf", "serial": "serial-l6", "scanned_at": "2026-11-08T08:45", "barcode": "BC-l6"},
+    {"event_id": "scan-l4-shelf", "session_id": "ST-001", "device_id": "gun-1", "area": "shelf", "serial": "serial-l4", "scanned_at": "2026-11-08T09:10", "barcode": "BC-l4"},
+    {"event_id": "scan-l1-backroom", "session_id": "ST-002", "device_id": "gun-2", "area": "backroom", "serial": "serial-l1", "scanned_at": "2026-11-08T11:00", "barcode": "BC-l1"}
+  ],
+  "rescans": [
+    {"event_id": "rescan-l1", "session_id": "ST-002", "serial": "serial-l1", "device_id": "gun-2", "operator": "staff-2", "seal_sha": "seal-back"}
+  ],
+  "transfers": [],
+  "handovers": [
+    {"event_id": "handover-l3", "order_id": "order-l3", "serial": "serial-l3", "seal_sha": "seal-h3", "loading_scan_id": "scan-l3-load", "signed_by_carrier": "carrier-x", "signed_by_store": "staff-1", "at": "2026-11-08T12:30"}
+  ]
+}

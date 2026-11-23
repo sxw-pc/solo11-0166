@@ -1,0 +1,42 @@
+{
+  "contracts": [
+    {"event_id": "lens1-contract", "item": "lens-1", "version": 1, "owner": "seller-a", "serial": "serial-l1", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 5000, "commission_pct": 10, "signed_by": "seller-a"},
+    {"event_id": "lens2-contract", "item": "lens-2", "version": 1, "owner": "seller-a", "serial": "serial-l2", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 5000, "commission_pct": 10, "signed_by": "seller-a"},
+    {"event_id": "lens3-contract", "item": "lens-3", "version": 1, "owner": "seller-b", "serial": "serial-l3", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 5000, "commission_pct": 10, "signed_by": "seller-b"},
+    {"event_id": "lens4-contract", "item": "lens-4", "version": 1, "owner": "seller-b", "serial": "serial-l4", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 5000, "commission_pct": 10, "signed_by": "seller-b"},
+    {"event_id": "lens5-contract", "item": "lens-5", "version": 1, "owner": "seller-c", "serial": "serial-l5", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 5000, "commission_pct": 10, "signed_by": "seller-c"},
+    {"event_id": "lens6-contract", "item": "lens-6", "version": 1, "owner": "seller-c", "serial": "serial-l6", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 5000, "commission_pct": 10, "signed_by": "seller-c"},
+    {"event_id": "lens7-contract", "item": "lens-7", "version": 1, "owner": "seller-d", "serial": "serial-l7", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 5000, "commission_pct": 10, "signed_by": "seller-d"},
+    {"event_id": "lens8-contract", "item": "lens-8", "version": 1, "owner": "seller-d", "serial": "serial-l8", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 5000, "commission_pct": 10, "signed_by": "seller-d"}
+  ],
+  "proofs": [
+    {"event_id": "lens1-proof", "item": "lens-1", "serial": "serial-l1", "holder": "seller-a", "issuer": "registry"},
+    {"event_id": "lens2-proof", "item": "lens-2", "serial": "serial-l2", "holder": "seller-a", "issuer": "registry"},
+    {"event_id": "lens3-proof", "item": "lens-3", "serial": "serial-l3", "holder": "seller-b", "issuer": "registry"},
+    {"event_id": "lens4-proof", "item": "lens-4", "serial": "serial-l4", "holder": "seller-b", "issuer": "registry"},
+    {"event_id": "lens5-proof", "item": "lens-5", "serial": "serial-l5", "holder": "seller-c", "issuer": "registry"},
+    {"event_id": "lens6-proof", "item": "lens-6", "serial": "serial-l6", "holder": "seller-c", "issuer": "registry"},
+    {"event_id": "lens7-proof", "item": "lens-7", "serial": "serial-l7", "holder": "seller-d", "issuer": "registry"},
+    {"event_id": "lens8-proof", "item": "lens-8", "serial": "serial-l8", "holder": "seller-d", "issuer": "registry"}
+  ],
+  "inspections": [
+    {"event_id": "lens1-insp", "item": "lens-1", "version": 1, "serial": "serial-l1", "functional": "pass", "cosmetic": "clean", "photo_sha": "photo-l1", "inspector": "checker-a"},
+    {"event_id": "lens2-insp", "item": "lens-2", "version": 1, "serial": "serial-l2", "functional": "pass", "cosmetic": "clean", "photo_sha": "photo-l2", "inspector": "checker-a"},
+    {"event_id": "lens3-insp", "item": "lens-3", "version": 1, "serial": "serial-l3", "functional": "pass", "cosmetic": "clean", "photo_sha": "photo-l3", "inspector": "checker-a"},
+    {"event_id": "lens4-insp", "item": "lens-4", "version": 1, "serial": "serial-l4", "functional": "pass", "cosmetic": "clean", "photo_sha": "photo-l4", "inspector": "checker-a"},
+    {"event_id": "lens5-insp", "item": "lens-5", "version": 1, "serial": "serial-l5", "functional": "pass", "cosmetic": "clean", "photo_sha": "photo-l5", "inspector": "checker-a"},
+    {"event_id": "lens6-insp", "item": "lens-6", "version": 1, "serial": "serial-l6", "functional": "pass", "cosmetic": "clean", "photo_sha": "photo-l6", "inspector": "checker-a"},
+    {"event_id": "lens7-insp", "item": "lens-7", "version": 1, "serial": "serial-l7", "functional": "pass", "cosmetic": "clean", "photo_sha": "photo-l7", "inspector": "checker-a"},
+    {"event_id": "lens8-insp", "item": "lens-8", "version": 1, "serial": "serial-l8", "functional": "pass", "cosmetic": "clean", "photo_sha": "photo-l8", "inspector": "checker-a"}
+  ],
+  "prices": [
+    {"event_id": "lens1-price", "item": "lens-1", "version": 1, "amount": 8000, "at": "2026-11-02", "signer": "shop-a"},
+    {"event_id": "lens2-price", "item": "lens-2", "version": 1, "amount": 8000, "at": "2026-11-02", "signer": "shop-a"},
+    {"event_id": "lens3-price", "item": "lens-3", "version": 1, "amount": 8000, "at": "2026-11-02", "signer": "shop-a"},
+    {"event_id": "lens4-price", "item": "lens-4", "version": 1, "amount": 8000, "at": "2026-11-02", "signer": "shop-a"},
+    {"event_id": "lens5-price", "item": "lens-5", "version": 1, "amount": 8000, "at": "2026-11-02", "signer": "shop-a"},
+    {"event_id": "lens6-price", "item": "lens-6", "version": 1, "amount": 8000, "at": "2026-11-02", "signer": "shop-a"},
+    {"event_id": "lens7-price", "item": "lens-7", "version": 1, "amount": 8000, "at": "2026-11-02", "signer": "shop-a"},
+    {"event_id": "lens8-price", "item": "lens-8", "version": 1, "amount": 8000, "at": "2026-11-02", "signer": "shop-a"}
+  ]
+}

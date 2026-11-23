@@ -22,6 +22,8 @@ def decide(db,item):
         elif not listing or listing['state']!='listed':
             prior=db.execute('SELECT * FROM sale_decision WHERE item=?',(item,)).fetchone()
             if prior and prior['state']=='settled' and delivery and delivery['signed_at']<=(db.execute('SELECT MIN(at) FROM revocation WHERE item=?',(item,)).fetchone()[0] or '9999'):
+                from .stocktake import rebuild as rebuild_custody
+                rebuild_custody(db)
                 return dict(prior)
             state,reason='blocked','item was not eligible for current public sale'
         elif payment['provider']!='bank' or payment['amount']<listing['price']:
@@ -35,7 +37,11 @@ def decide(db,item):
             commission=payment['amount']*contract['commission_pct']//100
             owner_amount=payment['amount']-commission
             state,reason='settled','bank payment and serial-matched delivery reconciled'
-    return update(db,'sale_decision',item,state=state,reason=reason,owner_amount=owner_amount,commission=commission,frozen=frozen)
+    result=update(db,'sale_decision',item,state=state,reason=reason,owner_amount=owner_amount,commission=commission,frozen=frozen)
+    # Custody classification reads delivery evidence, so keep it in step.
+    from .stocktake import rebuild as rebuild_custody
+    rebuild_custody(db)
+    return result
 
 def import_data(db,data):
     touched=set()

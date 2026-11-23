@@ -15,6 +15,12 @@ CREATE TABLE IF NOT EXISTS delivery(event_id TEXT PRIMARY KEY,order_id TEXT NOT 
 CREATE TABLE IF NOT EXISTS return_claim(event_id TEXT PRIMARY KEY,order_id TEXT NOT NULL,item TEXT NOT NULL,at TEXT NOT NULL,reason TEXT NOT NULL,photo_sha TEXT NOT NULL);
 CREATE TABLE IF NOT EXISTS sale_decision(item TEXT PRIMARY KEY,state TEXT NOT NULL,reason TEXT NOT NULL,owner_amount INTEGER NOT NULL,commission INTEGER NOT NULL,frozen INTEGER NOT NULL,version INTEGER NOT NULL);
 CREATE TABLE IF NOT EXISTS decision_history(id INTEGER PRIMARY KEY,subsystem TEXT NOT NULL,item TEXT NOT NULL,version INTEGER NOT NULL,state TEXT NOT NULL,reason TEXT NOT NULL,at TEXT DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS stocktake_session(session_id TEXT PRIMARY KEY,device_id TEXT NOT NULL,area TEXT NOT NULL,opened_at TEXT NOT NULL,closed_at TEXT NOT NULL,clock_offset_min INTEGER NOT NULL,area_seal_sha TEXT NOT NULL,operators TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS scan_event(event_id TEXT PRIMARY KEY,session_id TEXT NOT NULL,device_id TEXT NOT NULL,area TEXT NOT NULL,serial TEXT NOT NULL,scanned_at TEXT NOT NULL,barcode TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS rescan_confirm(event_id TEXT PRIMARY KEY,session_id TEXT NOT NULL,serial TEXT NOT NULL,device_id TEXT NOT NULL,operator TEXT NOT NULL,seal_sha TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS transfer_order(event_id TEXT PRIMARY KEY,serial TEXT NOT NULL,from_area TEXT NOT NULL,to_area TEXT NOT NULL,at TEXT NOT NULL,signed_by TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS carrier_handover(event_id TEXT PRIMARY KEY,order_id TEXT NOT NULL,serial TEXT NOT NULL,seal_sha TEXT NOT NULL,loading_scan_id TEXT NOT NULL,signed_by_carrier TEXT NOT NULL,signed_by_store TEXT NOT NULL,at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS custody_decision(item TEXT PRIMARY KEY,serial TEXT NOT NULL,state TEXT NOT NULL,reason TEXT NOT NULL,last_location TEXT,custodian TEXT,store_pickup INTEGER NOT NULL,needed_evidence TEXT NOT NULL,version INTEGER NOT NULL);
 """
 def connect(path):
     db=sqlite3.connect(path);db.row_factory=sqlite3.Row;db.executescript(SCHEMA);return db

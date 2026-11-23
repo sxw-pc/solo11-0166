@@ -28,6 +28,9 @@ def decide(db,item):
     result=update(db,'listing_decision',item,state=state,reason=reason,price=amount,inspection_id=inspection_id)
     from .sale import decide as sale_decide
     sale_decide(db,item)
+    # Custody promises depend on whether the mandate/listing is still live.
+    from .stocktake import rebuild as rebuild_custody
+    rebuild_custody(db)
     return result
 
 def import_data(db,data):
