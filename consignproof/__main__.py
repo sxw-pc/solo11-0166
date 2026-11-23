@@ -7,7 +7,12 @@ from .store import connect
 from .report import report,dumps
 def run_import(db,command,raw):
     data=json.loads(raw);file_record(db,command,raw)
-    return {'consign-import':title.import_data,'grade-import':listing.import_data,'sale-import':sale.import_data}[command](db,data)
+    if command=='consign-import':return title.import_data(db,data)
+    if command=='sale-import':return sale.import_data(db,data)
+    results=[]
+    if any(key in data for key in ('contracts','proofs','revocations')):results+=title.import_data(db,data)
+    results+=listing.import_data(db,data)
+    return results
 def audit(db):
     replay=connect(':memory:')
     try:
@@ -24,7 +29,7 @@ def main(argv=None):
         if a.command=='audit':print(json.dumps(audit(db),ensure_ascii=False));return
         if a.command=='demo':
             root=Path(__file__).parent.parent/'fixtures'
-            for command,name in [('consign-import','consign_ok.json'),('grade-import','grade_ok.json'),('sale-import','sale_ok.json')]:run_import(db,command,(root/name).read_bytes())
+            for command,name in [('consign-import','consign_ok.json'),('grade-import','grade_ok.json'),('sale-import','sale_ok.json'),('grade-import','calibrated_grade.json')]:run_import(db,command,(root/name).read_bytes())
             print(dumps(db));return
         if not a.file:p.error('--file required')
         print(json.dumps(run_import(db,a.command,Path(a.file).read_bytes()),ensure_ascii=False,indent=2))

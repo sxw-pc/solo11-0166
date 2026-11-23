@@ -1,0 +1,56 @@
+{
+  "contracts": [
+    {"event_id": "contract-q1", "item": "lens-q", "version": 1, "owner": "seller-q", "serial": "serial-lens-q", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-q"},
+    {"event_id": "contract-r1", "item": "lens-r", "version": 1, "owner": "seller-r", "serial": "serial-lens-r", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-r"},
+    {"event_id": "contract-s1", "item": "lens-s", "version": 1, "owner": "seller-s", "serial": "serial-lens-s", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-s"},
+    {"event_id": "contract-t1", "item": "lens-t", "version": 1, "owner": "seller-t", "serial": "serial-lens-t", "valid_from": "2026-11-01", "valid_to": "2026-11-30", "reserve_price": 8000, "commission_pct": 10, "signed_by": "seller-t"}
+  ],
+  "proofs": [
+    {"event_id": "proof-q1", "item": "lens-q", "serial": "serial-lens-q", "holder": "seller-q", "issuer": "registry"},
+    {"event_id": "proof-r1", "item": "lens-r", "serial": "serial-lens-r", "holder": "seller-r", "issuer": "registry"},
+    {"event_id": "proof-s1", "item": "lens-s", "serial": "serial-lens-s", "holder": "seller-s", "issuer": "registry"},
+    {"event_id": "proof-t1", "item": "lens-t", "serial": "serial-lens-t", "holder": "seller-t", "issuer": "registry"}
+  ],
+  "thresholds": [
+    {"event_id": "threshold-q1", "item": "lens-q", "metric": "focus_delay", "limit": 50, "unit": "ms", "version": 1, "issued_at": "2026-11-01T00:00:00Z"},
+    {"event_id": "threshold-r1", "item": "lens-r", "metric": "focus_delay", "limit": 50, "unit": "ms", "version": 1, "issued_at": "2026-11-01T00:00:00Z"},
+    {"event_id": "threshold-s1", "item": "lens-s", "metric": "focus_delay", "limit": 50, "unit": "ms", "version": 1, "issued_at": "2026-11-01T00:00:00Z"},
+    {"event_id": "threshold-t1", "item": "lens-t", "metric": "focus_delay", "limit": 50, "unit": "ms", "version": 1, "issued_at": "2026-11-01T00:00:00Z"}
+  ],
+  "readings": [
+    {"event_id": "reading-q-a1", "item": "lens-q", "serial": "serial-lens-q", "device": "device-a", "metric": "focus_delay", "value": 48, "unit": "ms", "measured_at": "2026-11-10T09:00:00Z", "temperature": 23.5, "photo_sha": "photo-q-a1", "photo_serial": "serial-lens-q", "inspector": "checker-a", "arrived_at": "2026-11-10T10:00:00Z"},
+    {"event_id": "reading-q-b1", "item": "lens-q", "serial": "serial-lens-q", "device": "device-b", "metric": "focus_delay", "value": 46, "unit": "ms", "measured_at": "2026-11-11T09:00:00Z", "temperature": 23.1, "photo_sha": "photo-q-b1", "photo_serial": "serial-lens-q", "inspector": "checker-b", "arrived_at": "2026-11-11T10:00:00Z"},
+    {"event_id": "reading-q2-1", "item": "lens-q", "serial": "serial-lens-q2", "device": "device-b", "metric": "focus_delay", "value": 45, "unit": "ms", "measured_at": "2026-11-12T09:00:00Z", "temperature": 23.0, "photo_sha": "photo-q2-1", "photo_serial": "serial-lens-q2", "inspector": "checker-b", "arrived_at": "2026-11-12T10:00:00Z"},
+    {"event_id": "reading-r-1", "item": "lens-r", "serial": "serial-lens-r", "device": "device-c", "metric": "focus_delay", "value": 48, "unit": "ms", "measured_at": "2026-11-10T09:00:00Z", "temperature": 22.9, "photo_sha": "photo-r-1", "photo_serial": "serial-lens-r", "inspector": "checker-a", "arrived_at": "2026-11-10T10:00:00Z"},
+    {"event_id": "reading-s-1", "item": "lens-s", "serial": "serial-lens-s", "device": "device-e", "metric": "focus_delay", "value": 48, "unit": "s", "measured_at": "2026-11-10T09:00:00Z", "temperature": 23.0, "photo_sha": "photo-s-1", "photo_serial": "serial-lens-s", "inspector": "checker-a", "arrived_at": "2026-11-10T10:00:00Z"},
+    {"event_id": "reading-t-1", "item": "lens-t", "serial": "serial-other", "device": "device-f", "metric": "focus_delay", "value": 42, "unit": "ms", "measured_at": "2026-11-10T09:00:00Z", "temperature": 23.0, "photo_sha": "photo-t-1", "photo_serial": "serial-other", "inspector": "checker-a", "arrived_at": "2026-11-10T10:00:00Z"},
+    {"event_id": "reading-t-2", "item": "lens-t", "serial": "serial-lens-t", "device": "device-g", "metric": "focus_delay", "value": 44, "unit": "ms", "measured_at": "2026-11-10T10:00:00Z", "temperature": 23.0, "photo_sha": "photo-t-2", "photo_serial": "serial-other", "inspector": "checker-b", "arrived_at": "2026-11-10T11:00:00Z"},
+    {"event_id": "reading-t-3", "item": "lens-t", "serial": "serial-lens-t", "device": "device-h", "metric": "focus_delay", "value": 44, "unit": "ms", "measured_at": "2026-11-10T11:00:00Z", "temperature": 23.0, "photo_sha": "photo-t-3", "photo_serial": "serial-lens-t", "inspector": "checker-c", "arrived_at": "2026-11-10T12:00:00Z"},
+    {"event_id": "reading-t-4", "item": "lens-t", "serial": "serial-lens-t", "device": "device-d", "metric": "focus_delay", "value": 44, "unit": "ms", "measured_at": "2026-11-10T12:00:00Z", "temperature": 23.0, "photo_sha": "photo-t-4", "photo_serial": "serial-lens-t", "inspector": "checker-d", "arrived_at": "2026-11-10T13:00:00Z"}
+  ],
+  "certificates": [
+    {"event_id": "cert-a-1", "device": "device-a", "issuer": "manufacturer", "correction": 4, "uncertainty": 0.5, "unit": "ms", "valid_from": "2026-11-01T00:00:00Z", "valid_to": "2026-11-30T23:59:59Z", "issued_at": "2026-11-12T08:00:00Z", "arrived_at": "2026-11-12T09:00:00Z"},
+    {"event_id": "cert-b-1", "device": "device-b", "issuer": "manufacturer", "correction": 0, "uncertainty": 1, "unit": "ms", "valid_from": "2026-11-01T00:00:00Z", "valid_to": "2026-11-30T23:59:59Z", "issued_at": "2026-11-01T08:00:00Z", "arrived_at": "2026-11-01T09:00:00Z"},
+    {"event_id": "cert-c-1", "device": "device-c", "issuer": "manufacturer", "correction": 2, "uncertainty": 1, "unit": "ms", "valid_from": "2026-11-01T00:00:00Z", "valid_to": "2026-11-30T23:59:59Z", "issued_at": "2026-11-01T08:00:00Z", "arrived_at": "2026-11-01T09:00:00Z"},
+    {"event_id": "cert-e-1", "device": "device-e", "issuer": "manufacturer", "correction": 0, "uncertainty": 0.5, "unit": "ms", "valid_from": "2026-11-01T00:00:00Z", "valid_to": "2026-11-30T23:59:59Z", "issued_at": "2026-11-01T08:00:00Z", "arrived_at": "2026-11-01T09:00:00Z"},
+    {"event_id": "cert-h-1", "device": "device-h", "issuer": "manufacturer", "correction": 0, "uncertainty": 0.5, "unit": "ms", "valid_from": "2026-10-01T00:00:00Z", "valid_to": "2026-11-05T23:59:59Z", "issued_at": "2026-10-01T08:00:00Z", "arrived_at": "2026-10-01T09:00:00Z"},
+    {"event_id": "cert-d-1", "device": "device-d", "issuer": "manufacturer", "correction": 1, "uncertainty": 0.5, "unit": "ms", "valid_from": "2026-11-01T00:00:00Z", "valid_to": "2026-11-30T23:59:59Z", "issued_at": "2026-11-01T08:00:00Z", "arrived_at": "2026-11-01T09:00:00Z"},
+    {"event_id": "cert-d-2", "device": "device-d", "issuer": "manufacturer", "correction": 2, "uncertainty": 0.5, "unit": "ms", "valid_from": "2026-11-01T00:00:00Z", "valid_to": "2026-11-30T23:59:59Z", "issued_at": "2026-11-02T08:00:00Z", "arrived_at": "2026-11-02T09:00:00Z"}
+  ],
+  "cert_revocations": [
+    {"event_id": "cert-revoke-a-1", "certificate": "cert-a-1", "revoked_at": "2026-11-15T08:00:00Z", "reason": "manufacturer withdrew drift sheet"}
+  ],
+  "reading_confirmations": [
+    {"event_id": "confirm-q-a-1", "reading": "reading-q-a1", "inspector": "checker-b", "verdict": "invalid", "at": "2026-11-12T10:00:00Z"},
+    {"event_id": "confirm-q-a-2", "reading": "reading-q-a1", "inspector": "checker-c", "verdict": "invalid", "at": "2026-11-12T11:00:00Z"}
+  ],
+  "reading_withdrawals": [
+    {"event_id": "withdraw-q-a-1", "reading": "reading-q-a1", "inspector": "checker-a", "at": "2026-11-13T09:00:00Z", "reason": "original drift report retracted"}
+  ],
+  "prices": [
+    {"event_id": "price-q-1", "item": "lens-q", "version": 1, "amount": 10000, "at": "2026-11-10", "signer": "shop-a"},
+    {"event_id": "price-r-1", "item": "lens-r", "version": 1, "amount": 10000, "at": "2026-11-10", "signer": "shop-a"},
+    {"event_id": "price-s-1", "item": "lens-s", "version": 1, "amount": 10000, "at": "2026-11-10", "signer": "shop-a"},
+    {"event_id": "price-t-1", "item": "lens-t", "version": 1, "amount": 10000, "at": "2026-11-10", "signer": "shop-a"}
+  ]
+}

@@ -1,6 +1,11 @@
 from .source import record
 from .store import update
 
+def approved_contract(db,item):
+    decision=db.execute('SELECT * FROM title_decision WHERE item=?',(item,)).fetchone()
+    if not decision or decision['state']!='approved' or not decision['contract_id']:return None
+    return db.execute('SELECT * FROM consignment WHERE event_id=?',(decision['contract_id'],)).fetchone()
+
 def decide(db,item):
     contracts=db.execute('SELECT * FROM consignment WHERE item=? ORDER BY version DESC,event_id',(item,)).fetchall()
     if not contracts:state,reason,contract_id='pending','signed consignment missing',None
